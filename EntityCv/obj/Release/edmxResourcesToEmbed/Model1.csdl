@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EntityModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ADRE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="KONUM" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="ADRES" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TEL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="BECERILER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BECERI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PUAN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="BILGILER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ADSOYAD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EGITIM" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="STAJDENEYIMLERI" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ILETISIM">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ADSOYAD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="MESAJ" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="KONU" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="EntityEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ADRES" EntityType="Self.ADRE" />
+    <EntitySet Name="BECERILERs" EntityType="Self.BECERILER" />
+    <EntitySet Name="BILGILERs" EntityType="Self.BILGILER" />
+    <EntitySet Name="ILETISIMs" EntityType="Self.ILETISIM" />
+    <EntitySet Name="ADMINs" EntityType="EntityModel.ADMIN" />
+  </EntityContainer>
+  <EntityType Name="ADMIN">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AD" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="SIFRE" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

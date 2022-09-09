@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EntityModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ADMIN">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AD" Type="varchar" MaxLength="15" />
+    <Property Name="SIFRE" Type="varchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="ADRES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EMAIL" Type="varchar" MaxLength="50" />
+    <Property Name="KONUM" Type="varchar" MaxLength="200" />
+    <Property Name="ADRES" Type="varchar" MaxLength="100" />
+    <Property Name="TEL" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="BECERILER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BECERI" Type="varchar" MaxLength="50" />
+    <Property Name="PUAN" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="BILGILER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ADSOYAD" Type="varchar" MaxLength="50" />
+    <Property Name="EGITIM" Type="varchar" MaxLength="1000" />
+    <Property Name="STAJDENEYIMLERI" Type="varchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="ILETISIM">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ADSOYAD" Type="varchar" MaxLength="50" />
+    <Property Name="EMAIL" Type="varchar" MaxLength="100" />
+    <Property Name="MESAJ" Type="varchar" MaxLength="1000" />
+    <Property Name="KONU" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityContainer Name="EntityModelStoreContainer">
+    <EntitySet Name="ADMIN" EntityType="Self.ADMIN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADRES" EntityType="Self.ADRES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BECERILER" EntityType="Self.BECERILER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BILGILER" EntityType="Self.BILGILER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ILETISIM" EntityType="Self.ILETISIM" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

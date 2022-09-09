@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EntityModelStoreContainer" CdmEntityContainer="EntityEntities">
+    <EntitySetMapping Name="ADRES">
+      <EntityTypeMapping TypeName="EntityModel.ADRE">
+        <MappingFragment StoreEntitySet="ADRES">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="KONUM" ColumnName="KONUM" />
+          <ScalarProperty Name="ADRES" ColumnName="ADRES" />
+          <ScalarProperty Name="TEL" ColumnName="TEL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BECERILERs">
+      <EntityTypeMapping TypeName="EntityModel.BECERILER">
+        <MappingFragment StoreEntitySet="BECERILER">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="BECERI" ColumnName="BECERI" />
+          <ScalarProperty Name="PUAN" ColumnName="PUAN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BILGILERs">
+      <EntityTypeMapping TypeName="EntityModel.BILGILER">
+        <MappingFragment StoreEntitySet="BILGILER">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ADSOYAD" ColumnName="ADSOYAD" />
+          <ScalarProperty Name="EGITIM" ColumnName="EGITIM" />
+          <ScalarProperty Name="STAJDENEYIMLERI" ColumnName="STAJDENEYIMLERI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ILETISIMs">
+      <EntityTypeMapping TypeName="EntityModel.ILETISIM">
+        <MappingFragment StoreEntitySet="ILETISIM">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ADSOYAD" ColumnName="ADSOYAD" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="MESAJ" ColumnName="MESAJ" />
+          <ScalarProperty Name="KONU" ColumnName="KONU" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADMINs">
+      <EntityTypeMapping TypeName="EntityModel.ADMIN">
+        <MappingFragment StoreEntitySet="ADMIN">
+          <ScalarProperty Name="SIFRE" ColumnName="SIFRE" />
+          <ScalarProperty Name="AD" ColumnName="AD" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
